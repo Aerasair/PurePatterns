@@ -1,0 +1,1 @@
+Hello. The project about simple realization design patterns.
