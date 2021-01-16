@@ -44,6 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creational\AbstractFactory\Carpenter.cs" />
+    <Compile Include="Creational\AbstractFactory\IDoor.cs" />
+    <Compile Include="Creational\AbstractFactory\IDoorFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\IDoorFittingExpert.cs" />
+    <Compile Include="Creational\AbstractFactory\IronDoor.cs" />
+    <Compile Include="Creational\AbstractFactory\IronDoorFactory.cs" />
+    <Compile Include="Creational\AbstractFactory\Welder.cs" />
+    <Compile Include="Creational\AbstractFactory\WoodenDoor.cs" />
+    <Compile Include="Creational\AbstractFactory\WoodenDoorFactory.cs" />
     <Compile Include="Creational\FabricMethod\CommunityExecutive.cs" />
     <Compile Include="Creational\FabricMethod\Developer.cs" />
     <Compile Include="Creational\FabricMethod\DevelopmentManager.cs" />
