@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PurePatterns.Creational.SimpleFactory;
+using PurePatterns.Creational.FabricMethod;
 
 namespace PurePatterns
 {
@@ -11,8 +12,14 @@ namespace PurePatterns
     {
         static void Main(string[] args)
         {
-            SimpleFactory();
+            // SimpleFactory();
+            FabricMethod();
+
+
+            Console.ReadLine();
         }
+
+
 
         static void SimpleFactory()
         {
@@ -21,7 +28,17 @@ namespace PurePatterns
             WoodenDoor door = DoorFactory.MakeDoor(100, 200);
             Console.WriteLine(door.width);
             Console.WriteLine(door.height);
-            Console.ReadLine();
         }
+
+        static void FabricMethod()
+        {
+            DevelopmentManager dev = new DevelopmentManager();
+            dev.takeInterview();
+
+            MarketingManager mar = new MarketingManager();
+            mar.takeInterview();
+        }
+
+
     }
 }
