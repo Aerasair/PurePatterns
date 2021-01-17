@@ -71,8 +71,11 @@ namespace PurePatterns
             burger.addPepperoni();
             burger.addLettuce();
             burger.addTomato();
-            burger.addCheese();
-            
+          //  burger.addCheese();
+            Console.WriteLine("pepperoni " + burger.pepperoni); 
+            Console.WriteLine("lettuce " + burger.lettuce); 
+            Console.WriteLine("tomato " + burger.tomato); 
+            Console.WriteLine("cheese " + burger.cheese); 
         }
     }
 }

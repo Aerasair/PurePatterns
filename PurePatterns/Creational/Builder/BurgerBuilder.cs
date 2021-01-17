@@ -38,7 +38,7 @@ namespace PurePatterns.Creational.Builder
 
         public void addTomato()
         {
-            this.tomato = tomato;
+            this.tomato = true;
         }
 
         public BurgerBuilder build()
