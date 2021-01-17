@@ -10,7 +10,7 @@ namespace PurePatterns.Creational.FabricMethod
     {
         public void askQuestons()
         {
-            Console.WriteLine("Спрашивает про программирование"); 
+            Console.WriteLine("Ask about programming"); 
         }
     }
 }

@@ -53,6 +53,8 @@
     <Compile Include="Creational\AbstractFactory\Welder.cs" />
     <Compile Include="Creational\AbstractFactory\WoodenDoor.cs" />
     <Compile Include="Creational\AbstractFactory\WoodenDoorFactory.cs" />
+    <Compile Include="Creational\Builder\Burger.cs" />
+    <Compile Include="Creational\Builder\BurgerBuilder.cs" />
     <Compile Include="Creational\FabricMethod\CommunityExecutive.cs" />
     <Compile Include="Creational\FabricMethod\Developer.cs" />
     <Compile Include="Creational\FabricMethod\DevelopmentManager.cs" />

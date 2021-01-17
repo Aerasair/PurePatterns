@@ -10,7 +10,7 @@ namespace PurePatterns.Creational.AbstractFactory
     {
         public void getDescription()
         {
-            Console.WriteLine("Я железная дверь");
+            Console.WriteLine("I'm iron door");
         }
     }
 }

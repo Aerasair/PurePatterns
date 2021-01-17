@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using PurePatterns.Creational.SimpleFactory;
 using PurePatterns.Creational.FabricMethod;
 using PurePatterns.Creational.AbstractFactory;
+using PurePatterns.Creational.Builder;
+
 
 namespace PurePatterns
 {
@@ -14,9 +16,9 @@ namespace PurePatterns
         static void Main(string[] args)
         {
             // SimpleFactory();
-            //  FabricMethod();
-            AbstractFactory();
-
+            // FabricMethod();
+            //AbstractFactory();
+            Builder();
 
 
             Console.ReadLine();
@@ -63,5 +65,14 @@ namespace PurePatterns
             expert2.getDescription();            
         }
 
+        static void Builder()
+        {
+            BurgerBuilder burger = new BurgerBuilder(14);
+            burger.addPepperoni();
+            burger.addLettuce();
+            burger.addTomato();
+            burger.addCheese();
+            
+        }
     }
 }

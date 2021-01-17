@@ -10,7 +10,7 @@ namespace PurePatterns.Creational.FabricMethod
     {
         public void askQuestons()
         {
-            Console.WriteLine("Спрашивает о работе с сообществом");
+            Console.WriteLine("Ask about community works");
         }
     }
 }
