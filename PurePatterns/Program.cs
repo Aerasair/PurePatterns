@@ -4,6 +4,7 @@ using PurePatterns.Creational.FabricMethod;
 using PurePatterns.Creational.AbstractFactory;
 using PurePatterns.Creational.Builder;
 using PurePatterns.Creational.Prototype;
+using PurePatterns.Creational.Singleton;
 
 namespace PurePatterns
 {
@@ -15,7 +16,8 @@ namespace PurePatterns
             // FabricMethod();
             //AbstractFactory();
             // Builder();
-            Prototype();
+            //Prototype();
+            CallSingleton();
 
             Console.ReadLine();
         }
@@ -115,6 +117,15 @@ namespace PurePatterns
             Console.WriteLine("   p3 instance values (everything was kept the same):");
             Console.WriteLine("      Name: {0:s}, Age: {1:d}, BirthDate: {2:MM/dd/yy}", p3.name, p3.age, p3.birthDate);
             Console.WriteLine("      ID#: {0:d}", p3.idInfo.idNumber);
+        }
+
+        static void CallSingleton()
+        {
+            Singleton s1 = Singleton.GetInstance();
+            Singleton s2 = Singleton.GetInstance();
+
+            if (s1 == s2) Console.WriteLine("They are two same objects");
+            else Console.WriteLine("Singleton doesn't work");
         }
 
     }

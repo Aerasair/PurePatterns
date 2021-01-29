@@ -66,6 +66,7 @@
     <Compile Include="Creational\SimpleFactory\DoorFactory.cs" />
     <Compile Include="Creational\SimpleFactory\IDOOR.cs" />
     <Compile Include="Creational\SimpleFactory\WoodenDoor.cs" />
+    <Compile Include="Creational\Singleton\Singleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
