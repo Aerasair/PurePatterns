@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PurePatterns.Creational.SimpleFactory;
 using PurePatterns.Creational.FabricMethod;
 using PurePatterns.Creational.AbstractFactory;
 using PurePatterns.Creational.Builder;
-
+using PurePatterns.Creational.Prototype;
 
 namespace PurePatterns
 {
@@ -18,8 +14,8 @@ namespace PurePatterns
             // SimpleFactory();
             // FabricMethod();
             //AbstractFactory();
-            Builder();
-
+            // Builder();
+            Prototype();
 
             Console.ReadLine();
         }
@@ -77,5 +73,49 @@ namespace PurePatterns
             Console.WriteLine("tomato " + burger.tomato); 
             Console.WriteLine("cheese " + burger.cheese); 
         }
+
+        static void Prototype()
+        {
+            Person p1 = new Person();
+            p1.age = 24;
+            p1.birthDate = Convert.ToDateTime("1996-05-04");
+            p1.name = "Andrey";
+            p1.idInfo = new IdInfo(666);
+
+            Person p2 = p1.ShallowCopy();
+
+            Person p3 = p1.DeepCopy();
+
+            Console.WriteLine("Original values of p1, p2, p3:");
+            Console.WriteLine("   p1 instance values: ");
+
+            Console.WriteLine("      Name: {0:s}, Age: {1:d}, BirthDate: {2:MM/dd/yy}", p1.name, p1.age, p1.birthDate);
+            Console.WriteLine("      ID#: {0:d}", p1.idInfo.idNumber);
+
+            Console.WriteLine("   p2 instance values:");
+            Console.WriteLine("      Name: {0:s}, Age: {1:d}, BirthDate: {2:MM/dd/yy}", p2.name, p2.age, p2.birthDate);
+            Console.WriteLine("      ID#: {0:d}", p2.idInfo.idNumber);
+            Console.WriteLine("   p3 instance values:");
+            Console.WriteLine("      Name: {0:s}, Age: {1:d}, BirthDate: {2:MM/dd/yy}", p3.name, p3.age, p3.birthDate);
+            Console.WriteLine("      ID#: {0:d}", p3.idInfo.idNumber);
+
+            p1.age = 25;
+            p1.birthDate = Convert.ToDateTime("2000-01-01");
+            p1.name = "Garen";
+            p1.idInfo.idNumber = 8800;
+
+            Console.WriteLine("\nValues of p1, p2 and p3 after changes to p1:");
+            Console.WriteLine("   p1 instance values: ");
+            Console.WriteLine("      Name: {0:s}, Age: {1:d}, BirthDate: {2:MM/dd/yy}", p1.name, p1.age, p1.birthDate);
+            Console.WriteLine("      ID#: {0:d}", p1.idInfo.idNumber);
+            Console.WriteLine("   p2 instance values (reference values have changed):");
+            Console.WriteLine("      Name: {0:s}, Age: {1:d}, BirthDate: {2:MM/dd/yy}", p2.name, p2.age, p2.birthDate);
+            Console.WriteLine("      ID#: {0:d}", p2.idInfo.idNumber);
+            //p3.name = "Jinn";
+            Console.WriteLine("   p3 instance values (everything was kept the same):");
+            Console.WriteLine("      Name: {0:s}, Age: {1:d}, BirthDate: {2:MM/dd/yy}", p3.name, p3.age, p3.birthDate);
+            Console.WriteLine("      ID#: {0:d}", p3.idInfo.idNumber);
+        }
+
     }
 }

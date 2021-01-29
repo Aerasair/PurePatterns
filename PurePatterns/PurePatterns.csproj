@@ -61,6 +61,8 @@
     <Compile Include="Creational\FabricMethod\HiringManager.cs" />
     <Compile Include="Creational\FabricMethod\IInterviewer.cs" />
     <Compile Include="Creational\FabricMethod\MarketingManager.cs" />
+    <Compile Include="Creational\Prototype\IdInfo.cs" />
+    <Compile Include="Creational\Prototype\Person.cs" />
     <Compile Include="Creational\SimpleFactory\DoorFactory.cs" />
     <Compile Include="Creational\SimpleFactory\IDOOR.cs" />
     <Compile Include="Creational\SimpleFactory\WoodenDoor.cs" />
@@ -70,5 +72,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
